@@ -23,7 +23,7 @@ export const charactersRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/character',
   component: CharacterListPage,
-   validateSearch: (search: Record<string, unknown>): CharacterSearch => ({
+   validateSearch: (search: Record<string, string|unknown>): CharacterSearch => ({
     page: Number(search.page) > 0 ? Number(search.page) : 1,
   }),
 });

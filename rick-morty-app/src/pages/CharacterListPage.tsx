@@ -17,7 +17,7 @@ export default function CharacterListPage() {
 
   const handlePageChange = (newPage: number) => {console.log(newPage);
      navigate({
-      search: (prev) => ({ ...prev, page: newPage }), 
+      search: (prev: Record<string, string | undefined>) => ({ ...prev, page: newPage }), 
       replace: false,
     });
   };
